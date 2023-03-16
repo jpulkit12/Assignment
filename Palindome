@@ -1,0 +1,39 @@
+import java.util.Scanner;
+class Palindrome 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		int num = sc.nextInt();
+		int temp=num;
+		int rem;
+		int rev=0;
+		while (temp!=0)
+		{
+			rem = temp%10;
+			rev = rev * 10 + rem;
+			temp = temp/10;
+		}
+		if (num==rev)
+		{
+			System.out.println(rev+" is a palindrome number");
+		}
+		else
+		{
+			System.out.println(rev+" is not a palindrome number");
+			
+		}
+		
+	}
+}
+/*Output1:-
+Enter the number
+16461
+16461 is a palindrome number
+
+Output2:-
+Enter the number
+154
+451 is not a palindrome number
+*/
